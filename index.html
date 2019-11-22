@@ -1,78 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Hector Malaver</title>
-    <link rel="icon" type="image/png" href="images/logo2.png">
-</head>
-<body>
-    <header>
-        <style>
-            header{
-                background:rgb(4, 4, 88);
-                color: white
-            }
-        </style>
-        <nav>
-            <div>
-                <figure>
-                    <img src="images/logo.png">
-                </figure>
-            </div>
-            <ol>
-                <li>
-                    <a href="#Portafolio">Portafolio</a>
-                </li>
-                <li>
-                    <a href="#Eventos">Eventos</a>
-                </li>
-                <li>
-                    <a href="#Contactos">Contactos</a>
-                </li>
-            </ol>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <figure class="logo">
+          <img src="images/logo.png" height="50" />
+        </figure>
+        <nav class="menu">
+          <ol>
+            <li>
+              <a class="link" href="#portafolio">Portafolio</a>
+            </li>
+            <li>
+              <a class="link" href="#eventos">Experiencia</a>
+            </li>
+            <li>
+              <a class="link" href="#contacto">Trabajemos juntos</a>
+            </li>
+          </ol>
         </nav>
+      </div>
     </header>
-    <section>
+    <section class="hero">
+      <div class="container">
         <h1>
-            Hola! Soy <strong>Hector Malaver</strong>, <br>
-            desarrollador <strong>Python</strong> <br>
-            con gusto por el diseño.
+          Bienvenido! Soy <strong>Hector Malaver</strong> <br/> Desarrollador  <strong>Python</strong> con <br> pasión por el <strong>diseño</strong>
         </h1>
-        <img src="images/hero.jpg" width="350" alt="imagen principal"> 
+        <img class="hero-image" src="images/hero-black.png" width="500" height="300">
+      </div>
     </section>
-    <section id="Portafolio">
-        <h2>Portafolio (Proyectos Destacados)</h2>
-        <article>
-            <h3>Curso Platzi</h3>
-            <h6>Diseño Web</h6>
-            <p><small><strong>Fecha:</strong>/00/00</small></p>
-            <p><small><strong>Puedes verlo en:</strong>...</small></p>
-            <p>La parla filosofal sobre el proyecto....................
-            .....................</p>
+    <section id="portafolio" class="portfolio">
+      <div class="container">
+          <span class='hello-txt'>Hola</span> 
+        <article class="project">
+          <div class="project-details">
+            <h3 class="project-title">Soy Hector Malaver</h3>
+            <h6 class="project-course">Desarrollador y Gestor de Proyectos</h6>
+            <p class="project-description">Como estudiante de Ingeniería Informática, me interesa el área de las tecnologías de la información,
+               en especial el desarrollo web y móvil, centrado en la experiencia de usuario; Además, es de mi interés la gestión de proyectos y 
+               la cultura Devops, en procesos de automatización, colaboración entre áreas e innovación. Dentro de mis habilidades, se resalta 
+               la comunicación asertiva, el promover y ser partícipe del trabajo en equipo; mi capacidad de aprendizaje me ha facilitado el 
+               desarrollo de diferentes proyectos cuyo fin ha sido exitoso. En el transcurso de mi formación profesional, he aprendido cómo 
+               sobrellevar y superar diferentes dificultades, gracias al compromiso que ejerzo en mis tareas y a mi perfil flexible, el cual
+               me permite adaptarme a diferentes funciones.</p>
+        </div>
+        <figure class="project-imageContainer">
+          <img class="project-image" width="300" src="images/F8.jpg" >
+        </figure>
+      </article>
+      <article class="project">
+          <div class="project-details">
+            <h3 class="project-title">Platzi Video</h3>
+            <h6 class="project-course">React Native / React</h6>
+            <p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small></p>
+            <p class="project-url"><small><strong>Puedes verlo en:</strong> www.platzi.com/native</small></p>
+            <p class="project-description">Platzi Video fue el resultado de 3 meses de trabajo
+                para crear la mejor app para enseñar el funcionamiento
+                de React y React Native. Desde crear un vista-detalle, hasta patrones avanzados de nevegación, este proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma</p>
+          </div>
+          <figure class="project-imageContainer">
+            <img class="project-image" width="500" src="images/platzi-video-react-native.png" alt="prouyecto del curso de React Native">
+          </figure>
         </article>
+      </div>
+      
     </section>
-    <section id="Eventos">
-        <h2>Más proyectos y logros</h2>
-        <article>
-            <figure>
-                <img src="images/platzi-conf.jpg" width="350" alt="imagen conferencia platzi">
-            </figure>
-            <h3>PlatziConf Colombia 2019</h3>
-            <img src="images/platzi-video-react-native.png" width="350" alt="desarrollo con react">
-            <p>Evento de Platzi, .....</p>
-            <a href="https://www.youtube.com/watch?v=0Lci_Kpq508" target="_blank">ver</a>
+    <div class="container">
+      <h2 class="event-list-title">Más sobre mi experiencia</h2>
+    </div>
+    <section id="eventos" class="event-list">
+      <div class="container">
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image" src="images/platzi-conf.jpg" width="500" />
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">PlatziConf México 2018</h3>
+            <p class="event-description">El evento más grande sobre gente que quiere aprender más de internet. En esté evento te comparto como tener una vida de constante aprendizaje.</p>
+            <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver Plática</a>
+          </div>
         </article>
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image" src="images/platzi-conf.jpg" width="500" />
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">PlatziConf México 2018</h3>
+            <p class="event-description">El evento más grande sobre gente que quiere aprender más de internet. En esté evento te comparto como tener una vida de constante aprendizaje.</p>
+            <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver Plática</a>
+          </div>
+        </article>
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image" src="images/platzi-conf.jpg" width="500" />
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">PlatziConf México 2018</h3>
+            <p class="event-description">El evento más grande sobre gente que quiere aprender más de internet. En esté evento te comparto como tener una vida de constante aprendizaje.</p>
+            <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver Plática</a>
+          </div>
+        </article>
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image" src="images/platzi-conf.jpg" width="500" />
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">PlatziConf México 2018</h3>
+            <p class="event-description">El evento más grande sobre gente que quiere aprender más de internet. En esté evento te comparto como tener una vida de constante aprendizaje.</p>
+            <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver Plática</a>
+          </div>
+        </article>
+      </div>
     </section>
-    <section id="Contactos">
-        <form action="/suscripción/">
-            <h3>Creamos algo juntos ?</h3>
-            <label for="email">Dejame tu email</label>
-            <input id="email" type="text" placeholder="Déjame tú email" value="@gmail.com">
-            <input type="submit" value="texto..">
-            <button>Enviar</button>
+    <section id="contacto" class="contact">
+      <div class="container">
+        <form action="/suscripcion/" class="form-email">
+          <h3>¿Creamos algo juntos?</h3>
+          <input type="text" placeholder="Déjame tu email" id="email">
+          <button>Enviar</button>
         </form>
+        <div class="social">
+          <a href="https://twitter.com/leonidasesteban" class="social-link twitter"></a>
+          <a href="https://facebook.com/leonidas.esteban" class="social-link facebook"></a>
+          <a href="https://github.com/leonidasesteban" class="social-link github"></a>
+          <a href="https://instagram.com/leonidasesteban" class="social-link instagram"></a>
+        </div>
+      </div>
     </section>
-    
-    <footer>Footer</footer>
-</body>
+    <footer class="footer">
+      <div class="container">
+        <div>
+          <p><img src="images/logo.png" width="50" > Curso de Desarrollo web online </p>
+        </div>
+        <div>
+          <p>
+            Diseñado por <strong>Hector Malaver</strong>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
