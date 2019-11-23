@@ -5,9 +5,12 @@
     <title>Hector Malaver</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <!--<link rel="stylesheet" href="css/media.css" media="screen and (max-width:780px)"> -->
     <link rel="stylesheet" href="css/estilos.css">
+    <meta name="viewport" content="width=device-width, inicial-scale= 1">
   </head>
   <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
       <div class="container">
         <figure class="logo">
@@ -33,29 +36,30 @@
         <h1>
           Bienvenido! Soy <strong>Hector Malaver</strong> <br/> Desarrollador  <strong>Python</strong> con <br> pasión por el <strong>diseño</strong>
         </h1>
-        <img class="hero-image" src="images/hero-black.png" width="500" height="300">
+        <img class="hero-image" src="images/fondo-principal.jpg" width="500" height="300">
       </div>
     </section>
+
     <section id="portafolio" class="portfolio">
       <div class="container">
-          <span class='hello-txt'>Hola</span> 
+        <span class='hello-txt'>Hola</span> 
         <article class="project">
-          <div class="project-details">
-            <h3 class="project-title">Soy Hector Malaver</h3>
-            <h6 class="project-course">Desarrollador y Gestor de Proyectos</h6>
-            <p class="project-description">Como estudiante de Ingeniería Informática, me interesa el área de las tecnologías de la información,
-               en especial el desarrollo web y móvil, centrado en la experiencia de usuario; Además, es de mi interés la gestión de proyectos y 
-               la cultura Devops, en procesos de automatización, colaboración entre áreas e innovación. Dentro de mis habilidades, se resalta 
-               la comunicación asertiva, el promover y ser partícipe del trabajo en equipo; mi capacidad de aprendizaje me ha facilitado el 
-               desarrollo de diferentes proyectos cuyo fin ha sido exitoso. En el transcurso de mi formación profesional, he aprendido cómo 
-               sobrellevar y superar diferentes dificultades, gracias al compromiso que ejerzo en mis tareas y a mi perfil flexible, el cual
-               me permite adaptarme a diferentes funciones.</p>
-        </div>
-        <figure class="project-imageContainer">
-          <img class="project-image" width="300" src="images/F8.jpg" >
-        </figure>
-      </article>
-      <article class="project">
+            <div class="project-details">
+              <h3 class="project-title">Soy Hector Malaver</h3>
+              <h6 class="project-course">Desarrollador y Gestor de Proyectos</h6>
+              <p class="project-description">Como estudiante de Ingeniería Informática, me interesa el área de las tecnologías de la información,
+                en especial el desarrollo web y móvil, centrado en la experiencia de usuario; Además, es de mi interés la gestión de proyectos y 
+                la cultura Devops, en procesos de automatización, colaboración entre áreas e innovación. Dentro de mis habilidades, se resalta 
+                la comunicación asertiva, el promover y ser partícipe del trabajo en equipo; mi capacidad de aprendizaje me ha facilitado el 
+                desarrollo de diferentes proyectos cuyo fin ha sido exitoso. En el transcurso de mi formación profesional, he aprendido cómo 
+                sobrellevar y superar diferentes dificultades, gracias al compromiso que ejerzo en mis tareas y a mi perfil flexible, el cual
+                me permite adaptarme a diferentes funciones.</p>
+            </div>
+            <figure class="project-imageContainer">
+              <img class="project-image" width="300" src="images/F8.jpg" >
+            </figure>
+        </article>
+        <article class="project">
           <div class="project-details">
             <h3 class="project-title">Platzi Video</h3>
             <h6 class="project-course">React Native / React</h6>
@@ -70,8 +74,9 @@
           </figure>
         </article>
       </div>
-      
+
     </section>
+
     <div class="container">
       <h2 class="event-list-title">Más sobre mi experiencia</h2>
     </div>
@@ -89,7 +94,7 @@
         </article>
         <article class="event">
           <figure class="event-imageContainer">
-            <img class="event-image" src="images/platzi-conf.jpg" width="500" />
+              <video class="html-movie" src="videos/prueba-video.mp4" width="1280" height="720" controls></video>
           </figure>
           <div class="event-detail">
             <h3 class="event-title">PlatziConf México 2018</h3>
@@ -99,8 +104,10 @@
         </article>
         <article class="event">
           <figure class="event-imageContainer">
-            <img class="event-image" src="images/platzi-conf.jpg" width="500" />
-          </figure>
+              <div class="flexible-video">
+                  <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/6sF0Or9fk9Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </figure>
           <div class="event-detail">
             <h3 class="event-title">PlatziConf México 2018</h3>
             <p class="event-description">El evento más grande sobre gente que quiere aprender más de internet. En esté evento te comparto como tener una vida de constante aprendizaje.</p>
@@ -146,5 +153,29 @@
         </div>
       </div>
     </footer>
+    <script>
+        // console.log('Hola mundo! es mi primera linea en JS');
+        const ipad = window.matchMedia('screen and (max-width: 767px)')
+        const menu = document.querySelector('.menu');
+        // console.log(menu);
+        const burgerButton = document.querySelector('#burger-menu');
+        // console.log(burgerButton);
+        ipad.addListener(validation)
+        function validation(event) {
+          if (event.matches) {
+            burgerButton.addEventListener('click', hideShow)
+          } else {
+            burgerButton.removeEventListener('click', hideShow)
+          }
+        }
+        validation(ipad);
+        function hideShow() {
+          if (menu.classList.contains('is-active')) {
+            menu.classList.remove('is-active');
+          } else {
+            menu.classList.add('is-active');
+          }
+        }
+      </script>
   </body>
 </html>
